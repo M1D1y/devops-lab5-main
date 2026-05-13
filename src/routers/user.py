@@ -7,7 +7,7 @@ router = APIRouter()
 
 @router.get("", status_code=status.HTTP_200_OK, response_model=UserInfo, responses={404: {"detail": "User not found"}})
 async def get_user(email: str):
-    '''Получение пользователя по email'''
+    '''Получение vjjvk пользователя по email'''
     user = db.get_user_by_email(email)
     if user is None:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="User not found")
