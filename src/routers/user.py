@@ -18,7 +18,7 @@ async def get_user(email: str):
     )
     
 @router.post("", status_code=status.HTTP_201_CREATED, response_model=int,
-             responses={409: {"detail": "User with this email already exists"}})
+             responses={409: {"detail": "User with this email already existSSSSSSs"}})
 async def create_user(data: CreateUser):
     '''Создание пользователя'''
     if db.get_user_by_email(data.email) is not None:
